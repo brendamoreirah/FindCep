@@ -9,7 +9,6 @@ export const Input = () => {
             style={styles.input}
             maxLenght={8}
         ></TextInput>
-
         </View>
     )
 }

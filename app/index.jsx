@@ -1,8 +1,7 @@
 import { Text, View, StyleSheet,ImageBackground,Image, ScrollView } from "react-native";
-import {Input} from '../components/input/input'
-import {Botao} from '../components/botao/botao'
-import {Card} from '../components/card/card'
-
+import {Input} from '../components/input/input';
+import {Botao} from '../components/botao/botao';
+import {Card} from '../components/card/card';
 
 export default function Index() {
   return (
@@ -17,7 +16,7 @@ export default function Index() {
   </ImageBackground>
   
   {/* 2. Campo de consulta */}
-<ScrollView style={styles.container.Scroll}>
+<ScrollView style={styles.containerScroll}>
 
 <View style= {styles.container}>
   {/* 2.1 Titulo */}
@@ -53,14 +52,13 @@ const styles = StyleSheet.create({
      width: "100%",
      minHeight:"100%",
      alignItems: 'center',
-     paddingBottom:5,
      
   },
   containerScroll:{
     flex:1.5,
     paddingTop: 50,
     height:'100%',
-    paddingBottom:80,
+    paddingBottom:20,
   },
   titulo:{
     fontSize:25,

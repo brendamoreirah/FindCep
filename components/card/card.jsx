@@ -1,8 +1,5 @@
 import { View, StyleSheet,Text, ScrollView } from "react-native"
 
-
-
-
 export const Card = () => {
     return (
         <View style={styles.card} showsVerticalScrollIndicator={false}>
@@ -30,9 +27,6 @@ export const Card = () => {
                 <Text style={styles.tituloValor}>Região</Text>
                 <Text style={styles.valor}>Dado 06</Text>
             </View>  
-
-            
-
         </View>
     )
 }
@@ -49,7 +43,7 @@ const styles = StyleSheet.create({
         // elevation: 2,
         boxShadow:'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
         borderRadius: 7,
-        gap: 20
+        gap: 20,
      },
 
      tituloValor:{
