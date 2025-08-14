@@ -1,15 +1,26 @@
+import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
-
+import { ActivityIndicator, View } from "react-native";
 export default function RootLayout() {
-//   return <Stack />;
-   return(
+  
+  const [fontsLoaded] = useFonts ({
+    "Poppins-Regular": require("../assets/fonts/Poppins/Poppins-Regular.ttf"),
 
-   
-<Stack>
-  <Stack.Screen name="index" options={{title: '', headerTransparent: true, headerShown: false}}/>
-</Stack>
-   )
+    "Poppins-Bold": require ("../assets/fonts/Poppins/Poppins-Bold.ttf")
+  })
 
-   //outra opcao
-  //  return <Stack screenOptions={{headerShown: false}}/>;
- }
+
+  if (!fontsLoaded) {
+    return(
+      <View style={{flex: 1, justifyContent: "center", alignItems}}>
+        <ActivityIndicator size="large"/>
+      </View>
+    )
+  }
+
+  return(
+  <Stack>
+    <Stack.Screen name="index" options={{title: '', headerTransparent: true, headerShown: false}} />
+  </Stack>
+  )
+}
